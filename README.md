@@ -64,11 +64,11 @@ Load the processed data.
 Split the data into training and validation sets.
 Define the RNN/LSTM model architecture using TensorFlow or PyTorch, optimized with Intel oneDNN.
 Train the model and save it in the results/ directory.
+
 Run the training script:
 
-`bash
-Copy code
 python src/model.py
+
 Evaluation
 The model's performance will be evaluated using the following metrics:
 
