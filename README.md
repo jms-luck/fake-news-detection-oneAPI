@@ -6,6 +6,7 @@ Project Structure
 plaintext
 Copy code
 fake-news-detection-oneAPI/
+```plain text
 ├── data/                   # Directory for datasets
 │   ├── raw/                # Raw social media posts or articles
 │   └── processed/          # Processed and cleaned data
@@ -17,7 +18,9 @@ fake-news-detection-oneAPI/
 ├── results/                # Directory to store results, models, and evaluation metrics
 ├── README.md               # Project documentation
 └── requirements.txt        # List of dependencies
-Prerequisites
+```
+
+## Prerequisites
 Intel OneAPI Toolkit
 Python 3.8 or above
 Jupyter Notebook (optional for exploration)
@@ -63,7 +66,7 @@ Define the RNN/LSTM model architecture using TensorFlow or PyTorch, optimized wi
 Train the model and save it in the results/ directory.
 Run the training script:
 
-bash
+`bash
 Copy code
 python src/model.py
 Evaluation
@@ -80,34 +83,49 @@ Once the model is trained, you can use it to predict whether a social media post
 
 Steps:
 
-Load the trained model.
-Provide new input data for prediction.
-The script will output whether the content is likely real or fake.
+* Load the trained model.
+* Provide new input data for prediction.
+*The script will output whether the content is likely real or fake.
+
 Run the inference script:
 
 bash
-Copy code
-python src/inference.py
+```python src/inference.py
+```
+
 Results
+
 The results of the model, including predictions and evaluation metrics, will be stored in the results/ directory. You can visualize these results using tools like Matplotlib or Plotly.
 
-Optimization with Intel OneAPI
+## Optimization with Intel OneAPI
+
 To further enhance performance, this project leverages Intel OneAPI's features:
 
-Intel oneMKL: Accelerates matrix operations within the model to improve training time.
-Quantization: Uses Intel's quantization tools to reduce model size and inference time with minimal accuracy loss.
-Parallelization: Uses Data Parallel C++ (DPC++) to parallelize parts of the code for faster data processing.
-Future Enhancements
-Real-time Data: Integrate real-time social media data for live predictions.
-Model Tuning: Experiment with different architectures (like BERT or GRU) and hyperparameters to improve accuracy.
-Visualization: Add a web interface for users to visualize detection results and explore flagged content.
-Contributing
+* Intel oneMKL: Accelerates matrix operations within the model to improve training time.
+
+* Quantization: Uses Intel's quantization tools to reduce model size and inference time with minimal accuracy loss.
+
+* Parallelization: Uses Data Parallel C++ (DPC++) to parallelize parts of the code for faster data processing.
+
+## Future Enhancements
+
+* Real-time Data: Integrate real-time social media data for live predictions.
+
+* Model Tuning: Experiment with different architectures (like BERT or GRU) and hyperparameters to improve accuracy.
+
+* Visualization: Add a web interface for users to visualize detection results and explore flagged content.
+
+## Contributing
+
 Feel free to contribute to this project by submitting pull requests or opening issues. Any suggestions or improvements are welcome!
 
+
 License
+
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 requirements.txt
+
 numpy
 pandas
 matplotlib
